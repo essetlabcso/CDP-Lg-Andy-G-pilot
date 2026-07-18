@@ -3,7 +3,6 @@ import { BrandMark } from "@/components/shell/BrandMark";
 import { ActionButton, AlertMessage, StatusBadge } from "@/components/ui";
 import { DEMO_USERS } from "@/lib/auth/demo-users";
 import { ROLE_LABELS } from "@/lib/auth/roles";
-import { DEMO_PROPOSAL_COURSE } from "@/lib/demo-data";
 import { readSupabasePublicConfig } from "@/lib/supabase/config";
 import { signInDemoUser } from "./actions";
 
@@ -197,39 +196,6 @@ export default async function SignInPage({ searchParams }: PageProps) {
                   </div>
                 </>
               ) : null}
-            </div>
-
-            <div className="mt-6 overflow-hidden rounded-card border border-design-border bg-deep-navy text-white shadow-card">
-              <div className="grid gap-4 p-5 sm:grid-cols-[1fr_auto] sm:items-center">
-                <div>
-                  <p className="text-sm font-semibold text-dec-green">
-                    Learning preview
-                  </p>
-                  <h2 className="mt-2 text-xl font-semibold">
-                    {DEMO_PROPOSAL_COURSE.shortTitle}
-                  </h2>
-                  <p className="mt-2 text-sm leading-6 text-slate-200">
-                    Continue practical lessons, track progress, and work toward
-                    a certificate-eligible course outcome.
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-white/10 p-4 text-center">
-                  <p className="text-3xl font-semibold text-white">68%</p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-300">
-                    Progress
-                  </p>
-                </div>
-              </div>
-              <div className="border-t border-white/10 bg-white/5 p-5">
-                <div className="h-3 overflow-hidden rounded-full bg-white/15">
-                  <div className="h-full w-[68%] rounded-full bg-dec-green" />
-                </div>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <StatusBadge label="Mobile-friendly" tone="green" />
-                  <StatusBadge label="Certificate eligible" tone="gold" />
-                  <StatusBadge label="Step-by-step" tone="blue" />
-                </div>
-              </div>
             </div>
 
             <p className="mt-6 text-center text-sm text-muted-text">
